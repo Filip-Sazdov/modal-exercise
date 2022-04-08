@@ -23,6 +23,10 @@ function App() {
     })
   }
 
+  const handleClose = () => {
+    setShowModal(false)
+  }
+
   const subtitle = "All the latest events in Marioland"
 
   return (
@@ -42,7 +46,7 @@ function App() {
       {showEvents && <EventsList events={events} handleClick={handleClick} />}
 
       {showModal && (
-        <Modal>
+        <Modal handleClose={handleClose}>
           <NewEventForm addEvent={addEvent} />
         </Modal>
       )}
