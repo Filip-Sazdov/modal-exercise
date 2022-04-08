@@ -19,7 +19,6 @@ export default function NewEventForm({ addEvent }) {
       location: location,
       id: Math.floor(Math.random() * 10000)
     }
-    console.log(event)
     addEvent(event)
     resetForm()
   }
